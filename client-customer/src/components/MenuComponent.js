@@ -28,7 +28,7 @@ class Menu extends Component {
                 </head>
                 <div className="float-left">
                     <ul className="menu">
-                        <img id="myImage" src="https://scontent.xx.fbcdn.net/v/t1.15752-9/371208051_1573759060108196_6214886239947051433_n.png?stp=dst-png_p206x206&_nc_cat=104&ccb=1-7&_nc_sid=510075&_nc_ohc=iXV_jTThkEQAX-N0S-t&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AdQUP2eJedn9HD3NSYbGfdYmHFuRHpCUshdWsSGoQow6IQ&oe=658C1C6D"alt="logopic" ></img>    
+                        <img id="myImage" src="https://scontent.xx.fbcdn.net/v/t1.15752-9/377239200_877065520488446_3528870452289073443_n.png?stp=dst-png_s180x540&_nc_cat=106&ccb=1-7&_nc_sid=510075&_nc_ohc=U2olKhGD8QgAX_Md1qA&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AdT3GxZo7sUw89lUnaov4A8SyURMkvH__NMyPaUAiNIy2g&oe=658C31A6"alt="logopic" ></img>    
                         <li className="menu"><Link to="/" class="menuhome"> Home </Link></li>
                         
                         {cates}
