@@ -74,7 +74,7 @@ div.float-clear {
 /* --------------------------------------------home/menu-------------------------------------------- */
 
 ul.menu {
-    margin: 10px;
+    margin: 7px;
     padding: 0px;
 }
 /* Color for dark */
@@ -89,7 +89,7 @@ li.menu {
 
 .menu .menuhome{
     color: var(--main-color);
-    border-radius: 30px;
+    border-radius: 20px;
 
 }
 .menu .menuhome:hover{
@@ -439,4 +439,9 @@ figure.caption-right {
 .login .btn-login:hover{
     background: var(--text-color);
     color: var(--hover-grey);
+}
+
+#myImage{
+    width:110px;
+    height:80px;
 }

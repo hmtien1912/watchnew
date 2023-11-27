@@ -33,7 +33,7 @@ class ProductDetail extends Component {
                                             <td>{prod.name}</td>
                                         </h3>
                                         <h5>
-                                            <td align="right"></td>
+                                            <td align="right">Price:</td>
                                             <td>{prod.price}</td>
                                         </h5>
                                         <div class="color-select">
@@ -117,7 +117,7 @@ class ProductDetail extends Component {
                 mycart[index].quantity += quantity;
             }
             this.context.setMycart(mycart);
-            alert("OK BABY !");
+            alert("Success !");
         } else {
             alert("Please input quantity");
         }

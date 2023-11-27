@@ -11,6 +11,7 @@ class Menu extends Component {
             txtKeyword: "",
         };
     }
+    
     render() {
         const cates = this.state.categories.map((item) => {
             return (
@@ -19,6 +20,7 @@ class Menu extends Component {
                 </li>
             );
         });
+        
         return (
             <div className="border-bottom">
                 <head>
@@ -26,8 +28,9 @@ class Menu extends Component {
                 </head>
                 <div className="float-left">
                     <ul className="menu">
+                        <img id="myImage" src="https://scontent.xx.fbcdn.net/v/t1.15752-9/371208051_1573759060108196_6214886239947051433_n.png?stp=dst-png_p206x206&_nc_cat=104&ccb=1-7&_nc_sid=510075&_nc_ohc=iXV_jTThkEQAX-N0S-t&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AdQUP2eJedn9HD3NSYbGfdYmHFuRHpCUshdWsSGoQow6IQ&oe=658C1C6D"alt="logopic" ></img>    
                         <li className="menu"><Link to="/" class="menuhome"> Home </Link></li>
-                        <li className="menu"><Link to='/gmap'>Google Map</Link></li>
+                        
                         {cates}
                         <div style={{ display: "inline" }} class="form-switch">
                     <input class="form-check-input" type="checkbox" onChange={(e) => this.ckbChangeMode(e)} />&nbsp; Dark | Light
@@ -77,5 +80,6 @@ class Menu extends Component {
       document.documentElement.setAttribute('data-bs-theme', 'light');
     }
   }
+  
 }
 export default withRouter(Menu);

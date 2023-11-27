@@ -95,11 +95,11 @@ class Mycart extends Component {
         axios.post("/api/customer/checkout", body, config).then((res) => {
             const result = res.data;
             if (result) {
-                alert("OK BABY !");
+                alert("Success !");
                 this.context.setMycart([]);
                 this.props.navigate("/home");
             } else {
-                alert("SORRY BABY !");
+                alert("Fail !");
             }
         });
     }

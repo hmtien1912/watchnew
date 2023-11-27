@@ -10,6 +10,17 @@ class Product extends Component {
             products: [],
         };
     }
+    // Hàm định dạng giá tiền
+    formatPrice(price) {
+        // Đảm bảo giá trị là một số trước khi định dạng
+        const numberPrice = Number(price);
+        // Sử dụng 'currencyDisplay: 'code'' để đảm bảo mã tiền tệ hiển thị
+        return new Intl.NumberFormat('vi-VN', {
+            style: 'currency',
+            currency: 'VND',
+            currencyDisplay: 'code'
+        }).format(numberPrice) + " VND"; // Thêm "VND" vào chuỗi định dạng nếu cần
+    }
     render() {
         const prods = this.state.products.map((item) => {
             return (
@@ -66,5 +77,6 @@ class Product extends Component {
             this.setState({ products: result });
         });
     }
+    
 }
 export default withRouter(Product);

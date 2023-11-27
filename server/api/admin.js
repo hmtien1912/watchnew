@@ -153,4 +153,27 @@ router.get('/customers', JwtUtil.checkToken, async function (req, res) {
     const orders = await OrderDAO.selectByCustID(_cid);
     res.json(orders);
   });
+// product
+router.put('/products/:id', JwtUtil.checkToken, async function (req, res) {
+    const _id = req.params.id;
+    const name = req.body.name;
+    const price = req.body.price;
+    const cid = req.body.category;
+    const image = req.body.image;
+    const now = new Date().getTime(); // milliseconds
+    const category = await CategoryDAO.selectByID(cid);
+    const product = { _id: _id, name: name, price: price, image: image, cdate: now, category: category };
+    const result = await ProductDAO.update(product);
+    res.json(result);
+  });
+// category
+router.put('/categories/:id', JwtUtil.checkToken, async function (req, res) {
+    const _id = req.params.id;
+    const name = req.body.name;
+    const category = { _id: _id, name: name };
+    const result = await CategoryDAO.update(category);
+    res.json(result);
+  });
+
+
 module.exports = router;

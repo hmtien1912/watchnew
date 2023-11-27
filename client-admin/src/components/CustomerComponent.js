@@ -158,7 +158,7 @@ class Customer extends Component {
       if (result) {
         this.apiGetCustomers();
       } else {
-        alert('SORRY BABY!');
+        alert('Fail!');
       }
     });
   }
